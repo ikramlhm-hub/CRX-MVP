@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## Getting Started
@@ -38,4 +38,3 @@ Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/bui
 =======
 # CRX-Marketplace
 A marketplace designed to empower and showcase independent brands through visibility, simplicity, and fair collaboration
->>>>>>> 62368da40772630d36c9049b850e0d7b11bc40fd
