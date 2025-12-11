@@ -15,9 +15,30 @@ export default function ValueProposition() {
       </p>
 
       {/* Bouton CTA */}
-      <button className="mt-24 bg-[#5506DB] text-white font-poppins font-semibold text-[22px] px-16 py-5 rounded-xl shadow-lg hover:opacity-90 transition">
+      <button className="
+          mt-24
+          bg-white 
+          text-black 
+          font-poppins 
+          font-semibold 
+          text-[22px] 
+          px-16 
+          py-5 
+          rounded-xl 
+          shadow-lg 
+          border-2 border-black
+          hover:opacity-90 
+          transition
+        ">
         Devenons partenaires
-      </button>
+        </button>
+
+
+
+
+
+
+
 
     </section>
   );

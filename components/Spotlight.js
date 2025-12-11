@@ -66,8 +66,8 @@ export default function Spotlight() {
 
               <p className="font-semibold mt-2">{p.price}</p>
 
-              <button className="mt-3 flex items-center justify-center gap-2 bg-[#5506DB] px-6 py-2 text-sm font-semibold rounded text-white ml-auto">
-                <Image src="/icons/cart.png" width={20} height={20} alt="cart" />
+              <button className="mt-3 flex items-center justify-center gap-2 bg-[#FFFFFF] px-6 py-2 text-sm font-semibold rounded text-black ml-auto">
+                <Image src="/icons/cart.jpg" width={20} height={20} alt="cart" />
                 Ajouter au panier
               </button>
 

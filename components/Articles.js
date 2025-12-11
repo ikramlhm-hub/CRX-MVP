@@ -2,44 +2,44 @@
 
 import Image from "next/image";
 
-const categories = ["Vestes", "Pullovers", "Jupes", "Pantalons"];
+const categories = ["Casual", "Streetwear", "Elegant", "Bohème"];
 
 const articles = [
   {
     id: 1,
     img: "/icons/articles/article1.png",
     title: "KREATEUR",
-    description: "",
+    description: "Basé à Inendroa, KREATEUR est spécialisé en ",
   },
   {
     id: 2,
     img: "/icons/articles/article2.png",
-    title: "KREATEUR",
-    description: "",
+    title: "CLEA.TION",
+    description: "Paragrpahe sur CleaTion",
   },
   {
     id: 3,
     img: "/icons/articles/article3.png",
-    title: "KREATEUR",
-    description: "",
+    title: "MARK",
+    description: "Paragraphe sur Mark",
   },
   {
     id: 4,
     img: "/icons/articles/article4.png",
-    title: "KREATEUR",
-    description: "",
+    title: "SAKU HIN",
+    description: "Paragraphe sur Saku Hin",
   },
   {
     id: 5,
     img: "/icons/articles/article5.png",
-    title: "KREATEUR",
-    description: "",
+    title: "DEZA INA",
+    description: "Paragraphe sur Deza Ina",
   },
   {
     id: 6,
     img: "/icons/articles/article6.png",
-    title: "KREATEUR",
-    description: "",
+    title: "FA.XION",
+    description: "Paragraphe sur Fa.XION",
   },
 ];
 
@@ -62,10 +62,23 @@ export default function Articles() {
           ))}
         </div>
 
-        {/* Voir plus */}
-        <button className="font-poppins bg-[#5506DB] text-white px-10 py-2 text-sm rounded-md font-semibold shadow-md hover:opacity-90 transition">
-          Voir plus
-        </button>
+        {/* Voir tous */}
+<button className="
+  font-poppins 
+  bg-white 
+  text-black 
+  px-10 py-2 
+  text-sm 
+  rounded-md 
+  font-semibold 
+  shadow-md 
+  border-2 border-black
+  hover:opacity-90 
+  transition
+">
+  Voir tous
+</button>
+
       </div>
 
       {/* -------------------- GRILLE ARTICLES -------------------- */}
