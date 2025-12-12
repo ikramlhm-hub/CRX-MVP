@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import Link from "next/link";   // ⬅️ AJOUT OBLIGATOIRE
 
 export default function Header() {
   const [open, setOpen] = useState(false);
@@ -10,13 +11,14 @@ export default function Header() {
       {/* LIGNE DU HAUT */}
       <div className="flex w-full flex-wrap items-center justify-between gap-4 px-4 py-4 sm:flex-nowrap sm:px-10 sm:py-6">
         {/* Logo */}
-        <div className="h-12 w-12 sm:h-16 sm:w-16">
+        <Link href="/" className="h-12 w-12 sm:h-16 sm:w-16">
           <img
             src="/icons/logo.png"
             alt="Logo CRX"
-            className="h-full w-full object-contain"
+            className="h-full w-full object-contain cursor-pointer"
           />
-        </div>
+        </Link>
+
 
         {/* Barre de recherche */}
         <div className="order-3 w-full sm:order-none sm:mx-10 sm:flex-1 sm:max-w-xl">
@@ -84,9 +86,11 @@ export default function Header() {
 
           {/* Boutons texte (desktop seulement) */}
           <div className="hidden items-center gap-3 sm:flex">
-            <button className="bg-[#FFFFFF] px-4 py-2 text-xs font-bold text-black rounded-md">
-              Connexion
-            </button>
+            <Link href="/login">
+              <button className="bg-[#FFFFFF] px-4 py-2 text-xs font-bold text-black rounded-md">
+                Connexion
+              </button>
+            </Link>
             <button className="bg-[#FFFFFF] px-4 py-2 text-xs font-bold text-black rounded-md">
               Service client
             </button>
@@ -128,9 +132,12 @@ export default function Header() {
       {/* MENU MOBILE */}
       {open && (
         <div className="flex flex-col gap-2 border-t border-black/10 px-4 pb-4 pt-2 text-sm sm:hidden">
-          <button className="bg-[#FFFFFF] px-4 py-2 text-left font-bold text-black rounded-md">
-            Connexion
-          </button>
+          <Link href="/login">
+            <button className="bg-[#FFFFFF] px-4 py-2 text-left font-bold text-black rounded-md">
+              Connexion
+            </button>
+          </Link>
+
           <button className="bg-[#FFFFFF] px-4 py-2 text-left font-bold text-black rounded-md">
             Service client
           </button>

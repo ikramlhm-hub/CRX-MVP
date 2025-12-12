@@ -63,22 +63,11 @@ export default function Articles() {
         </div>
 
         {/* Voir tous */}
-<button className="
-  font-poppins 
-  bg-white 
-  text-black 
-  px-10 py-2 
-  text-sm 
-  rounded-md 
-  font-semibold 
-  shadow-md 
-  border-2 border-black
-  hover:opacity-90 
-  transition
-">
-  Voir tous
-</button>
-
+        <button
+          className="font-poppins bg-white text-black px-10 py-2 text-sm rounded-md font-semibold shadow-md border-2 border-black hover:opacity-90 transition"
+        >
+          Voir tous
+        </button>
       </div>
 
       {/* -------------------- GRILLE ARTICLES -------------------- */}
@@ -104,10 +93,6 @@ export default function Articles() {
 
                 <p className="font-poppins text-sm mt-1 leading-relaxed">
                   {article.description}
-                </p>
-
-                <p className="font-poppins text-lg font-bold mt-2">
-                  {article.price}
                 </p>
               </div>
             </div>
