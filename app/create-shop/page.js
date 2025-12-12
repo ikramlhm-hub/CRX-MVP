@@ -11,36 +11,53 @@ export default function CreateShopPage() {
     const formData = new FormData(e.target);
     const data = Object.fromEntries(formData.entries());
 
-    console.log("Données envoyées :", data);
-
-    // 🔥 MVP : on stocke uniquement l’email du créateur
     localStorage.setItem("creatorEmail", data.email);
-
     setSuccess(true);
   };
 
   return (
     <div className="min-h-screen px-6 py-16 md:px-20">
 
-      {/* Notification de succès */}
+      {/* Modale de confirmation */}
       {success && (
-        <div className="mb-10 w-full bg-green-500 text-white p-4 rounded-xl font-semibold text-center">
-          Demande envoyée
+        <div className="fixed inset-0 bg-black/40 backdrop-blur-sm flex items-center justify-center z-50">
+          <div
+            className="
+              bg-white 
+              rounded-2xl 
+              px-10 
+              py-8 
+              shadow-2xl 
+              text-center 
+              animate-popIn
+            "
+          >
+            <h2 className="text-xl font-semibold text-black mb-2">
+              Demande envoyée
+            </h2>
+
+            <p className="text-black/70 mb-6">
+              Votre demande a bien été transmise.
+            </p>
+
+            <button
+              onClick={() => setSuccess(false)}
+              className="mt-2 bg-[#6A00FF] text-white px-6 py-2 rounded-xl font-medium"
+            >
+              Fermer
+            </button>
+          </div>
         </div>
       )}
 
-      {/* TITRE */}
       <h1 className="font-poppins text-xl font-semibold mb-10">
         INFORMATIONS BOUTIQUE
       </h1>
 
-      {/* FORMULAIRE */}
       <form onSubmit={handleSubmit}>
 
-        {/* --- CARD BOUTIQUE --- */}
         <div className="bg-white shadow-[0_4px_30px_rgba(0,0,0,0.25)] rounded-2xl p-10 mb-16">
 
-          {/* Nom boutique */}
           <label className="block font-semibold text-base mb-2">
             Nom de la boutique
           </label>
@@ -49,7 +66,6 @@ export default function CreateShopPage() {
             className="w-full h-12 bg-[#D9D9D9] rounded-xl mb-6 px-4 outline-none"
           />
 
-          {/* Style boutique */}
           <label className="block font-semibold text-base mb-2">
             Style de la boutique
           </label>
@@ -64,7 +80,6 @@ export default function CreateShopPage() {
             <option>Bohème</option>
           </select>
 
-          {/* Description */}
           <label className="block font-semibold text-base mb-2">
             Description de la boutique
           </label>
@@ -74,7 +89,6 @@ export default function CreateShopPage() {
             className="w-full bg-[#D9D9D9] rounded-xl mb-6 px-4 py-3 outline-none"
           />
 
-          {/* Adresse */}
           <label className="block font-semibold text-base mb-2">
             Adresse de la boutique
           </label>
@@ -96,9 +110,8 @@ export default function CreateShopPage() {
             />
           </div>
 
-          {/* Liens */}
           <label className="block font-semibold text-base mb-2">
-            Liens de la boutique (site web, Instagram…)
+            Liens de la boutique
           </label>
           <input 
             name="link1"
@@ -111,14 +124,13 @@ export default function CreateShopPage() {
 
           <div className="text-center text-2xl font-bold cursor-pointer">+</div>
 
-          {/* Méthodes livraison */}
           <div className="mt-8">
             <label className="flex items-start gap-3 mb-3">
               <input type="checkbox" name="delivery" className="mt-1" />
               <div>
                 <span className="font-semibold">Livraison</span> <br />
                 <span className="text-sm text-black/60">
-                  Possibilité pour les clients…
+                  Possibilité pour les clients.
                 </span>
               </div>
             </label>
@@ -128,7 +140,7 @@ export default function CreateShopPage() {
               <div>
                 <span className="font-semibold">Retrait en magasin</span> <br />
                 <span className="text-sm text-black/60">
-                  Possibilité pour les clients…
+                  Possibilité pour les clients.
                 </span>
               </div>
             </label>
@@ -136,7 +148,6 @@ export default function CreateShopPage() {
 
         </div>
 
-        {/* PARTIE VENDEUR */}
         <h1 className="font-poppins text-xl font-semibold mb-10">
           INFORMATIONS VENDEUR
         </h1>
@@ -161,7 +172,6 @@ export default function CreateShopPage() {
             </div>
           </div>
 
-          {/* Date de naissance */}
           <label className="block font-semibold mb-2">Date de naissance</label>
           <div className="flex items-center gap-4 mb-6">
             <input 
@@ -181,7 +191,6 @@ export default function CreateShopPage() {
             />
           </div>
 
-          {/* Adresse */}
           <label className="block font-semibold mb-2">Adresse</label>
           <div className="grid grid-cols-4 gap-4 mb-6">
             <input 
@@ -201,7 +210,6 @@ export default function CreateShopPage() {
             />
           </div>
 
-          {/* Contact */}
           <label className="block font-semibold mb-2">Contact</label>
           <div className="grid grid-cols-2 gap-4 mb-6">
             <input 
@@ -216,7 +224,6 @@ export default function CreateShopPage() {
             />
           </div>
 
-          {/* Banque */}
           <label className="block font-semibold mb-2">Informations bancaires</label>
           <input 
             name="bankHolder"
@@ -241,7 +248,6 @@ export default function CreateShopPage() {
 
         </div>
 
-        {/* Conditions */}
         <label className="flex items-start gap-3 mt-8">
           <input type="checkbox" required className="mt-1" />
           <span className="text-sm">
@@ -249,7 +255,6 @@ export default function CreateShopPage() {
           </span>
         </label>
 
-        {/* Bouton final */}
         <div className="text-center mt-10">
           <button 
             type="submit"

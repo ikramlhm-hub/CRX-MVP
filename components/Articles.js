@@ -98,7 +98,7 @@ export default function Articles() {
             </div>
 
             {/* Bouton */}
-            <button className="font-poppins w-[217px] mt-4 flex items-center justify-center gap-2 bg-[#5506DB] px-5 py-2 text-sm font-semibold text-white rounded-md shadow-md">
+            <button className="font-poppins w-[217px] mt-4 flex items-center justify-center gap-2 bg-[#FFFFFF] px-5 py-2 text-sm font-semibold text-black border-2 rounded-md shadow-md">
               Voir la vitrine
             </button>
 
