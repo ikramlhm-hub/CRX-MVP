@@ -15,10 +15,10 @@ export default function DashboardPage() {
   }, []);
 
   return (
-    <div className="min-h-screen bg-[#F3F3F3]">
+    <div className="min-h-screen bg-[#F3F3F3] overflow-x-hidden">
 
       <div className="w-full border-b border-black/10 bg-white">
-        <div className="flex gap-10 px-6 md:px-20 py-4 text-sm font-semibold">
+        <div className="flex gap-10 px-4 sm:px-6 md:px-20 py-4 text-sm font-semibold overflow-x-auto whitespace-nowrap">
           <Link href="/create-shop">
             <span className="cursor-pointer hover:opacity-70">INFORMATIONS BOUTIQUE</span>
           </Link>
@@ -44,67 +44,71 @@ export default function DashboardPage() {
         </div>
       </div>
 
-      <div className="px-6 md:px-20 py-10">
+      <div className="px-4 sm:px-6 md:px-20 py-10">
 
         <h1 className="text-2xl font-poppins font-bold mb-6">Commandes</h1>
 
-        <div className="bg-white rounded-xl shadow-md overflow-hidden">
-          <div className="grid grid-cols-6 font-semibold text-sm px-6 py-4 border-b items-center">
-            <span>Nom du client</span>
-            <span>Paiement</span>
-            <span>Livraison</span>
-            <span>Status</span>
-            <span>{"Date d'achat"}</span>
+        <div className="bg-white rounded-xl shadow-md overflow-x-auto">
+          <div className="min-w-[900px]">
 
-            <div className="flex items-center gap-2 justify-end pr-4">
-              <Image src="/icons/tri.png" alt="tri" width={18} height={18} />
-              <span className="text-xs text-black/60">Tri</span>
-            </div>
-          </div>
+            <div className="grid grid-cols-6 font-semibold text-sm px-6 py-4 border-b items-center">
+              <span>Nom du client</span>
+              <span>Paiement</span>
+              <span>Livraison</span>
+              <span>Status</span>
+              <span>Date d'achat</span>
 
-          <div className="max-h-[330px] overflow-y-auto">
-            <div className="grid grid-cols-6 px-6 py-4 border-b text-sm items-center">
-              <span>LEE Sanghyeok</span>
-              <div className="text-green-600 font-medium">
-                60€ <br />
-                <span className="text-xs text-black/60">Payé</span>
+              <div className="flex items-center gap-2 justify-end pr-4">
+                <Image src="/icons/tri.png" alt="tri" width={18} height={18} />
+                <span className="text-xs text-black/60">Tri</span>
               </div>
-              <span className="bg-gray-300 text-black/70 px-3 py-1 rounded-md text-xs w-fit">Non-envoyé</span>
-              <span className="bg-gray-400 text-white px-3 py-1 rounded-md text-xs w-fit">En cours</span>
-              <span>10/12/2025</span>
-              <button className="text-[#6A00FF] font-medium underline">Modifier</button>
             </div>
 
-            <div className="grid grid-cols-6 px-6 py-4 border-b text-sm items-center">
-              <span>AHN Wangho</span>
-              <div className="text-green-600 font-medium">
-                60€ <br />
-                <span className="text-xs text-black/60">Payé</span>
+            <div className="max-h-[330px] overflow-y-auto">
+              <div className="grid grid-cols-6 px-6 py-4 border-b text-sm items-center">
+                <span>LEE Sanghyeok</span>
+                <div className="text-green-600 font-medium">
+                  60€ <br />
+                  <span className="text-xs text-black/60">Payé</span>
+                </div>
+                <span className="bg-gray-300 text-black/70 px-3 py-1 rounded-md text-xs w-fit">Non-envoyé</span>
+                <span className="bg-gray-400 text-white px-3 py-1 rounded-md text-xs w-fit">En cours</span>
+                <span>10/12/2025</span>
+                <button className="text-[#6A00FF] font-medium underline">Modifier</button>
               </div>
-              <span className="bg-green-400 text-white px-3 py-1 rounded-md text-xs w-fit">Envoyé</span>
-              <span className="bg-green-600 text-white px-3 py-1 rounded-md text-xs w-fit">Complété</span>
-              <span>10/11/2025</span>
-              <button className="text-[#6A00FF] font-medium underline">Modifier</button>
+
+              <div className="grid grid-cols-6 px-6 py-4 border-b text-sm items-center">
+                <span>AHN Wangho</span>
+                <div className="text-green-600 font-medium">
+                  60€ <br />
+                  <span className="text-xs text-black/60">Payé</span>
+                </div>
+                <span className="bg-green-400 text-white px-3 py-1 rounded-md text-xs w-fit">Envoyé</span>
+                <span className="bg-green-600 text-white px-3 py-1 rounded-md text-xs w-fit">Complété</span>
+                <span>10/11/2025</span>
+                <button className="text-[#6A00FF] font-medium underline">Modifier</button>
+              </div>
+
+              <div className="grid grid-cols-6 px-6 py-4 border-b text-sm items-center">
+                <span>PARK Dohyeon</span>
+                <div className="text-green-600 font-medium">
+                  60€ <br />
+                  <span className="text-xs text-black/60">Payé</span>
+                </div>
+                <span className="bg-gray-300 text-black/70 px-3 py-1 rounded-md text-xs w-fit">Non-envoyé</span>
+                <span className="bg-red-600 text-white px-3 py-1 rounded-md text-xs w-fit">Annulé</span>
+                <span>04/10/2025</span>
+                <button className="text-[#6A00FF] font-medium underline">Modifier</button>
+              </div>
             </div>
 
-            <div className="grid grid-cols-6 px-6 py-4 border-b text-sm items-center">
-              <span>PARK Dohyeon</span>
-              <div className="text-green-600 font-medium">
-                60€ <br />
-                <span className="text-xs text-black/60">Payé</span>
-              </div>
-              <span className="bg-gray-300 text-black/70 px-3 py-1 rounded-md text-xs w-fit">Non-envoyé</span>
-              <span className="bg-red-600 text-white px-3 py-1 rounded-md text-xs w-fit">Annulé</span>
-              <span>04/10/2025</span>
-              <button className="text-[#6A00FF] font-medium underline">Modifier</button>
-            </div>
           </div>
         </div>
 
         <div className="flex flex-col md:flex-row gap-6 mt-10 w-full">
           <div className="flex-1 bg-white rounded-xl shadow-md p-6 flex flex-col justify-center">
             <div className="flex items-center gap-3 mb-3">
-              <Image src="/icons/piece.png" width={28} height={28} className="opacity-60" alt="paiement" />
+              <Image src="/icons/piece.png" width={28} height={28} alt="paiement" />
               <span className="text-2xl font-bold">2</span>
             </div>
             <div className="text-black/60 text-sm">Commandes en attente de paiement</div>
@@ -112,7 +116,7 @@ export default function DashboardPage() {
 
           <div className="flex-1 bg-white rounded-xl shadow-md p-6 flex flex-col justify-center">
             <div className="flex items-center gap-3 mb-3">
-              <Image src="/icons/camion.png" width={28} height={28} className="opacity-60" alt="livraison" />
+              <Image src="/icons/camion.png" width={28} height={28} alt="livraison" />
               <span className="text-2xl font-bold">1</span>
             </div>
             <div className="text-black/60 text-sm">Commandes en cours de livraison</div>
@@ -120,7 +124,7 @@ export default function DashboardPage() {
 
           <div className="flex-1 bg-white rounded-xl shadow-md p-6 flex flex-col justify-center">
             <div className="flex items-center gap-3 mb-3">
-              <Image src="/icons/retour.png" width={28} height={28} className="opacity-60" alt="retour" />
+              <Image src="/icons/retour.png" width={28} height={28} alt="retour" />
               <span className="text-2xl font-bold">1</span>
             </div>
             <div className="text-black/60 text-sm">Commandes annulées</div>
@@ -136,88 +140,56 @@ export default function DashboardPage() {
 
           <div className="bg-white rounded-xl shadow-md p-6 flex flex-col">
             <h3 className="font-semibold mb-4 text-lg">Article le plus vu</h3>
-
             <div className="w-full h-[220px] rounded-lg overflow-hidden mb-4">
-              <Image
-                src="/icons/articles/article1.png"
-                width={300}
-                height={220}
-                className="w-full h-full object-cover object-top"
-                alt="article-vu"
-              />
+              <Image src="/icons/articles/article1.png" width={300} height={220} className="w-full h-full object-cover object-top" alt="article-vu" />
             </div>
-
             <div className="font-semibold">Veste IELO</div>
             <div className="text-sm text-black/60 mb-4">55€</div>
-
-            <div className="flex items-center gap-2 text-black/70 text-sm mt-auto">
-              <Image src="/icons/eye.png" width={18} height={18} alt="vues" />
-              <span><strong>1389</strong> vues totales</span>
-            </div>
           </div>
 
           <div className="bg-white rounded-xl shadow-md p-6 flex flex-col">
             <h3 className="font-semibold mb-4 text-lg">Article le plus vendu</h3>
-
             <div className="w-full h-[220px] rounded-lg overflow-hidden mb-4">
-              <Image
-                src="/icons/articles/article1.png"
-                width={300}
-                height={220}
-                className="w-full h-full object-cover object-top"
-                alt="article-vendu"
-              />
+              <Image src="/icons/articles/article1.png" width={300} height={220} className="w-full h-full object-cover object-top" alt="article-vendu" />
             </div>
-
             <div className="font-semibold">Veste IELO</div>
             <div className="text-sm text-black/60 mb-4">55€</div>
-
-            <div className="flex items-center gap-2 text-black/70 text-sm mt-auto">
-              <Image src="/icons/cart.jpg" width={18} height={18} alt="vendus" />
-              <span><strong>163</strong> vendus</span>
-            </div>
           </div>
         </div>
 
         <h2 className="text-xl font-poppins font-bold mt-16 mb-6">Catalogue</h2>
 
-        <div className="bg-white rounded-xl shadow-md p-6 overflow-hidden">
-          <div className="grid grid-cols-6 font-semibold text-sm pb-4 border-b">
-            <span>Nom de l’article</span>
-            <span>Catégorie</span>
-            <span>Prix</span>
-            <span>En stock</span>
-            <span>Disponibilité</span>
-            <span className="text-right pr-4">Action</span>
-          </div>
+        <div className="bg-white rounded-xl shadow-md p-6 overflow-x-auto">
+          <div className="min-w-[900px]">
+            <div className="grid grid-cols-6 font-semibold text-sm pb-4 border-b">
+              <span>Nom de l’article</span>
+              <span>Catégorie</span>
+              <span>Prix</span>
+              <span>En stock</span>
+              <span>Disponibilité</span>
+              <span className="text-right pr-4">Action</span>
+            </div>
 
-          <div className="max-h-[350px] overflow-y-scroll mt-2">
-            {[...Array(7)].map((_, i) => (
-              <div key={i} className="grid grid-cols-6 py-4 text-sm items-center border-b">
-                <span>Veste IELO</span>
-                <span>Vestes</span>
-                <span className="font-semibold">55€</span>
-                <span>20</span>
-
-                {i === 1 || i === 2 ? (
-                  <span className="bg-gray-300 text-black/70 px-3 py-1 rounded-md text-xs w-fit">Caché</span>
-                ) : i === 4 ? (
-                  <span className="bg-black text-white px-3 py-1 rounded-md text-xs w-fit">Retiré</span>
-                ) : (
+            <div className="max-h-[350px] overflow-y-scroll mt-2">
+              {[...Array(7)].map((_, i) => (
+                <div key={i} className="grid grid-cols-6 py-4 text-sm items-center border-b">
+                  <span>Veste IELO</span>
+                  <span>Vestes</span>
+                  <span className="font-semibold">55€</span>
+                  <span>20</span>
                   <span className="bg-green-500 text-white px-3 py-1 rounded-md text-xs w-fit">Visible</span>
-                )}
+                  <span className="text-right pr-4 text-[#6A00FF] font-medium underline cursor-pointer">
+                    Modifier
+                  </span>
+                </div>
+              ))}
+            </div>
 
-                <span className="text-right pr-4 text-[#6A00FF] font-medium underline cursor-pointer">
-                  Modifier
-                </span>
-              </div>
-            ))}
-          </div>
-
-          <div className="flex justify-center mt-6">
-            <button className="flex items-center gap-2 text-black/70 text-sm hover:opacity-70">
-              <span className="text-xl">＋</span> Ajouter un article
-            </button>
+            <div className="flex justify-center mt-6">
+              <button className="flex items-center gap-2 text-black/70 text-sm hover:opacity-70">
+                <span className="text-xl">＋</span> Ajouter un article
+              </button>
+            </div>
           </div>
         </div>
 

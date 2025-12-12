@@ -16,20 +16,22 @@ export default function CreateShopPage() {
   };
 
   return (
-    <div className="min-h-screen px-6 py-16 md:px-20">
+    <div className="min-h-screen px-4 sm:px-6 py-12 md:px-20 md:py-16">
 
       {/* Modale de confirmation */}
       {success && (
-        <div className="fixed inset-0 bg-black/40 backdrop-blur-sm flex items-center justify-center z-50">
+        <div className="fixed inset-0 bg-black/40 backdrop-blur-sm flex items-center justify-center z-50 px-4">
           <div
             className="
               bg-white 
               rounded-2xl 
-              px-10 
+              px-6 sm:px-10
               py-8 
               shadow-2xl 
               text-center 
               animate-popIn
+              w-full
+              max-w-md
             "
           >
             <h2 className="text-xl font-semibold text-black mb-2">
@@ -42,7 +44,7 @@ export default function CreateShopPage() {
 
             <button
               onClick={() => setSuccess(false)}
-              className="mt-2 bg-[#6A00FF] text-white px-6 py-2 rounded-xl font-medium"
+              className="mt-2 bg-[#6A00FF] text-white px-6 py-2 rounded-xl font-medium w-full sm:w-auto"
             >
               Fermer
             </button>
@@ -56,7 +58,7 @@ export default function CreateShopPage() {
 
       <form onSubmit={handleSubmit}>
 
-        <div className="bg-white shadow-[0_4px_30px_rgba(0,0,0,0.25)] rounded-2xl p-10 mb-16">
+        <div className="bg-white shadow-[0_4px_30px_rgba(0,0,0,0.25)] rounded-2xl p-6 md:p-10 mb-16">
 
           <label className="block font-semibold text-base mb-2">
             Nom de la boutique
@@ -92,20 +94,20 @@ export default function CreateShopPage() {
           <label className="block font-semibold text-base mb-2">
             Adresse de la boutique
           </label>
-          <div className="flex gap-4 mb-6">
+          <div className="flex flex-col md:flex-row gap-4 mb-6">
             <input 
               name="shopAddress"
-              className="flex-1 h-12 bg-[#D9D9D9] rounded-xl px-4 outline-none" 
+              className="w-full md:flex-1 h-12 bg-[#D9D9D9] rounded-xl px-4 outline-none" 
               placeholder="Adresse" 
             />
             <input 
               name="shopPostal"
-              className="w-32 h-12 bg-[#D9D9D9] rounded-xl px-4 outline-none" 
+              className="w-full md:w-32 h-12 bg-[#D9D9D9] rounded-xl px-4 outline-none" 
               placeholder="Code postal" 
             />
             <input 
               name="shopCountry"
-              className="w-40 h-12 bg-[#D9D9D9] rounded-xl px-4 outline-none" 
+              className="w-full md:w-40 h-12 bg-[#D9D9D9] rounded-xl px-4 outline-none" 
               placeholder="Pays" 
             />
           </div>
@@ -152,9 +154,9 @@ export default function CreateShopPage() {
           INFORMATIONS VENDEUR
         </h1>
 
-        <div className="bg-white shadow-[0_4px_30px_rgba(0,0,0,0.25)] rounded-2xl p-10">
+        <div className="bg-white shadow-[0_4px_30px_rgba(0,0,0,0.25)] rounded-2xl p-6 md:p-10">
 
-          <div className="grid grid-cols-2 gap-6 mb-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
             <div>
               <label className="block font-semibold">Prénom</label>
               <input 
@@ -173,29 +175,29 @@ export default function CreateShopPage() {
           </div>
 
           <label className="block font-semibold mb-2">Date de naissance</label>
-          <div className="flex items-center gap-4 mb-6">
+          <div className="flex flex-col sm:flex-row gap-4 mb-6">
             <input 
               name="birthDay"
               placeholder="Jour" 
-              className="w-20 h-12 bg-[#D9D9D9] rounded-xl px-4 outline-none" 
+              className="w-full sm:w-20 h-12 bg-[#D9D9D9] rounded-xl px-4 outline-none" 
             />
             <input 
               name="birthMonth"
               placeholder="Mois" 
-              className="w-20 h-12 bg-[#D9D9D9] rounded-xl px-4 outline-none" 
+              className="w-full sm:w-20 h-12 bg-[#D9D9D9] rounded-xl px-4 outline-none" 
             />
             <input 
               name="birthYear"
               placeholder="Année" 
-              className="w-28 h-12 bg-[#D9D9D9] rounded-xl px-4 outline-none" 
+              className="w-full sm:w-28 h-12 bg-[#D9D9D9] rounded-xl px-4 outline-none" 
             />
           </div>
 
           <label className="block font-semibold mb-2">Adresse</label>
-          <div className="grid grid-cols-4 gap-4 mb-6">
+          <div className="grid grid-cols-1 md:grid-cols-4 gap-4 mb-6">
             <input 
               name="address"
-              className="col-span-2 h-12 bg-[#D9D9D9] rounded-xl px-4 outline-none" 
+              className="md:col-span-2 h-12 bg-[#D9D9D9] rounded-xl px-4 outline-none" 
               placeholder="Adresse" 
             />
             <input 
@@ -211,7 +213,7 @@ export default function CreateShopPage() {
           </div>
 
           <label className="block font-semibold mb-2">Contact</label>
-          <div className="grid grid-cols-2 gap-4 mb-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-6">
             <input 
               name="email"
               placeholder="Adresse mail"
@@ -258,7 +260,7 @@ export default function CreateShopPage() {
         <div className="text-center mt-10">
           <button 
             type="submit"
-            className="bg-[#6A00FF] text-white font-semibold text-base px-10 py-3 rounded-xl"
+            className="bg-[#6A00FF] text-white font-semibold text-base px-10 py-3 rounded-xl w-full sm:w-auto"
           >
             Envoyer ma demande
           </button>
